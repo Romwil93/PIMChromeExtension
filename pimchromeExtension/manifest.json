@@ -1,0 +1,31 @@
+{
+    "name": "SteamCode Chrome Extension", 
+    "description": "Sample Chrome Extension", 
+    "version": "1.0",
+    "manifest_version": 3, 
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "contextMenus"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "logo.png"
+    }, 
+
+
+    "icons": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+      },
+
+
+
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.google.com/*", "https://*.google.ch/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
