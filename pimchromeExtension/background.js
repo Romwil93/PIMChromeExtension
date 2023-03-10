@@ -38,8 +38,8 @@ chrome.contextMenus.onClicked.addListener(function(info, tab){
     var url = info.linkUrl;
 
     // Extract the filename from the URL
-    var filename = url.substring(url.lastIndexOf('/') + 1);
-
+    //var filename = url.substring(url.lastIndexOf('/') + 1);
+    var filename = url;
     var newURL = baseURL + filename;
     //create the new URL in the user's browser
     chrome.tabs.create({ url: newURL });
